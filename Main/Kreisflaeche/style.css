@@ -1,0 +1,59 @@
+body{
+    margin: 50px;
+    font-family: Arial, sans-serif;
+}
+h1{
+    color: #373f3c;
+}
+#D-Output{
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+button{
+    padding: 10px 20px;
+    background-color: #414d42;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 10px;
+}
+button:active {
+    transform: scale(0.95) rotate(-2deg);
+    box-shadow: 0 2px 12px rgba(65, 77, 66, 0.3);
+    background-color: #2e362e;
+    transition: transform 0.1s, box-shadow 0.1s, background-color 0.1s;
+}
+button {
+    transition: 
+        transform 0.3s cubic-bezier(0.4, 3, 0.2, 1), 
+        box-shadow 0.3s cubic-bezier(0.4, 3, 0.2, 1), 
+        background-color 0.3s cubic-bezier(0.4, 3, 0.2, 1), 
+        border-radius 0.3s cubic-bezier(0.4, 3, 0.2, 1),
+        color 0.3s cubic-bezier(0.4, 3, 0.2, 1),
+        width 0.3s cubic-bezier(0.4, 3, 0.2, 1),
+        height 0.3s cubic-bezier(0.4, 3, 0.2, 1);
+}
+button:active {
+    transform: scale(1.2);
+    background-color: #414d42;
+    color: #414d42;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    box-shadow: 0 4px 24px rgba(65, 77, 66, 0.2);
+    font-size: 0;
+    padding: 0;
+    outline: none;
+}
+button:active {
+    width: 40px;
+    height: 40px;
+}
+#Error_Output {
+    color: red;
+    margin-top: 20px;
+    font-weight: bold;
+}

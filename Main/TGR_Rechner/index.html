@@ -1,0 +1,315 @@
+<!-- Code made in Europe by Julian Clement: pieti30tv@gmail.com, Tel: +39 347 3327055 -->
+<!-- Julian Hackt-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title>Trinkgeld- und Aufteilungsrechner</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <header>
+            <div id="Heading">
+                <h1>Trinkgeld- und Aufteilungsrechner</h1>
+            </div>  
+        </header>
+
+        <main>
+            <div id="MainBody">
+                <div id="UpperPart">
+                    <div id="Betrag_IN">
+                        <label for="B_IN">Betrag: </label>
+                        <input type="text" id="B_IN" class = "Input" placeholder="zB: 100">
+                        <br><br>
+                    </div>
+                    <div id="Prozent_IN">
+                        <label for="Pr_IN">Prozent: </label>
+                        <input type="text" id="Pr_IN" class = "Input" placeholder="Prozent eingeben">
+                        <br><br>
+                    </div>
+                    <div id="Personen_IN">
+                        <label for="Pe_IN">Anzahl Personen: </label>
+                        <input type="text" id="Pe_IN" class = "Input" placeholder="Personen eingeben">
+                        <br>
+                    </div>
+
+                </div>    
+                
+                <div id="MidPart">
+                    <div id="Error_OUT">
+                        <p id="NaN-Error_OUT"></p><br>
+                    </div>
+
+                    <div id="Submit_BTN">
+                        <button id="Submit">Submit</button> 
+                        <br><br><br>
+                    </div>
+                </div>
+
+                
+
+                    <div id="Prozentwert_OUT">
+                        <label for="PrW_OUT">Prozentwert:</label>
+                        <input id="PrW_OUT", class = "Output" placeholder="Prozentwert" readonly><br>
+                    </div>
+
+                    <div id="Gesamtbetrag_OUT">
+                        <label for="Ges_OUT">Gesamtbetrag:</label>
+                        <input id="Ges_OUT", class = "Output" placeholder="Gesamtbetrag" readonly><br>
+                    </div>
+
+                    <div id="BetragProPerson_OUT">
+                        <label for="PP_OUT">Betrag pro Person:</label>
+                        <input id="PP_OUT", class = "Output" placeholder="Betrag pro Person" readonly><br><br>
+                    </div>
+                
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div id="LowerPart">
+                <div id="Rundungsoptionen">
+                    <label for="R_IN">Rundungsoptionen: </label>
+
+                    <select id="R_IN" class = "Input">
+                        <option value="0">Keine Rundung (Standart)</option>
+                        <option value="3">Auto (Empfohlen)</option>
+                        <option value="1">Aufrunden</option>
+                        <option value="2">Abrunden</option>
+                    </select><br>
+                </div>
+            </div>        
+        </footer>
+    </body>
+</html>
+
+<!-- This is code generated with Google Gemini. It has better CSS-Styling and better scripts: 
+
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zahlenberechnung</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-color: #f0f4f8;
+            min-height: 100vh;
+            justify-content: center;
+        }
+        div {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+        input[type="text"], select {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccd6e0;
+            border-radius: 8px;
+            font-size: 16px;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+        input[type="text"]:focus, select:focus {
+            border-color: #667eea;
+            outline: none;
+        }
+        button {
+            background-color: #667eea;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            width: 100%;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        button:hover {
+            background-color: #5a67d8;
+            transform: translateY(-2px);
+        }
+        button:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .error-message {
+            color: red;
+            font-weight: bold;
+            margin-top: 15px;
+            text-align: center;
+        }
+        p {
+            font-size: 16px;
+            color: #4a5568;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        p input[type="text"] {
+            width: 50%;
+            text-align: right;
+            padding-right: 0;
+            margin-bottom: 0;
+            background-color: #f9fafb;
+            cursor: default;
+        }
+        footer {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 400px;
+        }
+        #Rundungsoptionen {
+            padding: 20px;
+            background-color: #e2e8f0;
+            border-radius: 15px;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        #Rundungsoptionen label {
+            margin-bottom: 10px;
+            color: #2d3748;
+        }
+        #Rundungsoptionen select {
+            background-color: #ffffff;
+            border: 1px solid #cbd5e0;
+        }
+
+        @media (max-width: 600px) {
+            div {
+                padding: 20px;
+            }
+            button {
+                font-size: 16px;
+                padding: 10px 15px;
+            }
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+    <div>
+        <label for="B_IN">Betrag:</label>
+        <input type="text" id="B_IN" value="100">
+
+        <label for="Pr_IN">Prozent:</label>
+        <input type="text" id="Pr_IN" value="10">
+
+        <label for="Pe_IN">Personen:</label>
+        <input type="text" id="Pe_IN" value="2">
+
+        <button id="Submit">Berechnen & Prüfen</button>
+
+        <p id="NaN-Error_OUT" class="error-message"></p>
+        <p>Prozentwert: <input type="text" id="PrW_OUT" readonly></p>
+        <p>Gesamtbetrag: <input type="text" id="Ges_OUT" readonly></p>
+        <p>Pro Person: <input type="text" id="PP_OUT" readonly></p>
+    </div>
+
+    <footer>
+        <div id="LowerPart">
+            <div id="Rundungsoptionen">
+                <label for="R_IN">Rundungsoptionen:</label>
+                <select id="R_IN" class="Input">
+                    <option value="0">Keine Rundung (Standard)</option>
+                    <option value="3">Auto (Empfohlen)</option>
+                    <option value="1">Aufrunden</option>
+                    <option value="2">Abrunden</option>
+                </select><br>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("Submit").addEventListener("click", function() {
+                document.getElementById("NaN-Error_OUT").innerHTML = "";
+                document.getElementById("PrW_OUT").value = "";
+                document.getElementById("Ges_OUT").value = "";
+                document.getElementById("PP_OUT").value = "";
+
+                const Betrag = parseFloat(document.getElementById("B_IN").value);
+                const Prozent = parseFloat(document.getElementById("Pr_IN").value);
+                const Personen = parseFloat(document.getElementById("Pe_IN").value); 
+                const rundungsOption = document.getElementById("R_IN").value;
+
+                if (isNaN(Betrag) || isNaN(Prozent) || isNaN(Personen)) {
+                    document.getElementById("NaN-Error_OUT").innerHTML = "Achtung: Bitte gib nur gültige Zahlen ein!";
+                    return;
+                }
+
+                if (Personen <= 0) {
+                    document.getElementById("NaN-Error_OUT").innerHTML = "Fehler: Die Anzahl der Personen muss größer als Null sein!";
+                    return;
+                }
+
+                let PrW = (Betrag * (Prozent / 100));
+                let Gesamt = Betrag * (1 + (Prozent / 100));
+                let ProPerson = Gesamt / Personen;
+
+                const applyRounding = (value, option) => {
+                    switch (option) {
+                        case "1": 
+                            return Math.ceil(value);
+                        case "2": 
+                            return Math.floor(value);
+                        case "3": 
+                            return Math.round(value);
+                        case "0": 
+                        default:
+                            return value;
+                    }
+                };
+
+                PrW = applyRounding(PrW, rundungsOption);
+                Gesamt = applyRounding(Gesamt, rundungsOption);
+                ProPerson = applyRounding(ProPerson, rundungsOption);
+
+                document.getElementById("PrW_OUT").value = PrW.toFixed(2);
+                document.getElementById("Ges_OUT").value = Gesamt.toFixed(2);
+                document.getElementById("PP_OUT").value = ProPerson.toFixed(2);
+            });
+        });
+    </script>
+
+</body>
+</html>
+-->
+
+
+
+
+
+
+
+
+
+ 
+
+

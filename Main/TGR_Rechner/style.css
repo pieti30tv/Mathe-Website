@@ -1,0 +1,58 @@
+/* Füge das ganz oben in dein CSS hinzu */
+* {
+    box-sizing: border-box;
+}
+
+/* Und das für konsistente Darstellung */
+button, input, select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+body{
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    margin: 50px;
+    padding: 20px;
+    transform: scale(1.2);
+    transform-origin: 0 0;
+    width: 83.33%; /* 100/1.2 = 83.33% um Layout-Probleme zu vermeiden */
+}
+.Input{
+    border: solid 1px #000000;
+    border-radius: 20px;
+    align-content: center;
+    padding: 5px;
+    width: 200px;
+    margin: 10px auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    font-size: 16px;
+}
+.Output{
+    align-content: center;
+    margin: 10px auto;
+    border-radius: 20px;
+    border: solid 1px #000000;
+    width: 200px;
+    padding: 5px;
+    overflow: hidden;
+}
+#NaN-Error_OUT {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+}
+#Submit {
+    border-radius: 20px;
+    border: solid 1px #000000;
+    width: 100px;
+    height: 30px;
+}
+#Submit:hover {
+    background-color: #e0e0e0;
+    cursor: pointer;
+}
+#Submit:active {
+    background-color: #d0d0d0;
+}
