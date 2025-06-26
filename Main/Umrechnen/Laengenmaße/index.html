@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div id="Begrüssung">
+            <h1 id="BegrüssungH1">Längenmaße</h1>
+            <hr><hr>
+        </div>
+    </header>
+
+    <main>
+        <div id="MeterUpperPart">
+            <div id="MetrischesSystem">
+                <h3 id="MetrischesSystemH1">Metrisches System:</h3>
+            </div>
+        </div>
+        <div id="MeterMiddlePart">
+            <div id="MeterSelectUSPEH">
+                <label for="USPEH">Ursprungseinheit:</label>
+                <select name="Ursprungseinheit" id="USPEH">
+                    <option value="mm">Millimeter</option>
+                    <option value="cm">Zentimeter</option>
+                    <option value="dm">Dezimeter</option>
+                    <option value="m">Meter</option>
+                    <option value="km">Kilometer</option>
+                </select>
+            </div>
+            <br>
+            <div id="MeterSelectZielEH">
+                <label for="ZielEH">Zieleinheit:</label>
+                <select name="Zieleinheit" id="ZielEH">
+                    <option value="mm">Millimeter</option>
+                    <option value="cm">Zentimeter</option>
+                    <option value="dm">Dezimeter</option>
+                    <option value="m">Meter</option>
+                    <option value="km">Kilometer</option>
+                </select>
+            </div>
+            <br><hr><br> 
+        </div>
+        <div id="MeterLowerPart">
+            <div id="MeterInput">
+                <label for="MeterInputNUM">Millimeter:</label>
+                <input type="number" id="MeterInputNUM" placeholder="z.B 100">
+            </div>
+            <br>
+            <div id="MeterSubmit">
+                <button id="MeterSubmitBTN">Submit</button>
+            </div>
+            <br>
+            <div id="MeterOutput">
+                <label for="MeterOutputNUM">Millimeter:</label>
+                <input id="MeterOutputNUM" placeholder="Output" readonly>
+            </div>
+            <br><hr><hr><br>
+        </div>
+    </main>
+</body>
+</html>
