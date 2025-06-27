@@ -4,6 +4,11 @@ body{
 }
 h1{
     color: #373f3c;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
 }
 #D-Output{
     margin-top: 20px;
@@ -56,4 +61,43 @@ button:active {
     color: red;
     margin-top: 20px;
     font-weight: bold;
+}
+
+#D-Input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Mobile: identisch wie Desktop */
+@media screen and (max-width: 768px) {
+    body {
+        margin: 50px;
+        font-family: Arial, sans-serif;
+    }
+    
+    #D-Input {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    
+    button {
+        padding: 10px 20px;
+        background-color: #414d42;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 10px;
+    }
+    
+    #D-Output {
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        background-color: #f9f9f9;
+    }
 }
