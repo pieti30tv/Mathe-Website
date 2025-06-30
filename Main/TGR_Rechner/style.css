@@ -58,3 +58,21 @@ body{
 #Submit:active {
     background-color: #d0d0d0;
 }
+h1 {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+}
+
+/* Mobile: identisch wie Desktop */
+@media screen and (max-width: 768px) {
+    body{
+        background-color: #f0f0f0;
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        padding: 10px;
+        
+    }
+}
