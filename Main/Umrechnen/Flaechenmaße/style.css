@@ -1,3 +1,16 @@
+/* Füge das ganz oben in dein CSS hinzu */
+* {
+    box-sizing: border-box;
+}
+
+/* Und das für konsistente Darstellung */
+button, input, select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+
 body {
     font-family: Verdana, Tahoma, sans-serif;
     text-align: center;
