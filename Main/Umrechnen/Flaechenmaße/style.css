@@ -47,4 +47,9 @@ div {
     text-align: center;
     font-size: 24px;
     color: #333;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
 }
