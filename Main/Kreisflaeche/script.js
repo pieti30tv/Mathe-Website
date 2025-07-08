@@ -1,23 +1,22 @@
-let Durchmesser;
-let Radius;
-let Fläche;
-const Pi = 3.14159265358979323846;
+// script.js
 
-document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("D-Submit").addEventListener("click", function() {
-        try {
-            Durchmesser = parseFloat(document.getElementById("D-Input").value);
-            if (isNaN(Durchmesser) || Durchmesser <= 0) {
-                throw new Error("Bitte geben Sie eine gültige Zahl für den Durchmesser ein.");
-            }
-            Radius = Durchmesser / 2;
-            Fläche = Pi * (Radius * Radius);
-            document.getElementById("D-Output").value = Fläche;
-        } catch (error) {
-            document.getElementById("Error_Output").innerHTML = "Fehler: " + error.message;
+// Wait for the DOM to load
+document.addEventListener('DOMContentLoaded', () => {
+    // Get references to elements
+    const radiusInput = document.getElementById('radius');
+    const calcBtn = document.getElementById('calcBtn');
+    const resultDiv = document.getElementById('result');
+
+    // Calculate area of circle
+    function calculateArea() {
+        const r = parseFloat(radiusInput.value);
+        if (isNaN(r) || r <= 0) {
+            resultDiv.textContent = 'Bitte gib einen gültigen Radius ein.';
+            return;
         }
-    });
+        const area = Math.PI * r * r;
+        resultDiv.textContent = `Kreisfläche: ${area.toFixed(2)}`;
+    }
+
+    calcBtn.addEventListener('click', calculateArea);
 });
-
-
-
