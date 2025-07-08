@@ -1,21 +1,21 @@
 function convertToMeters(value, unit) {
     const conversions = {
-        'mm': 0.00001,
-        'cm': 0.00001,
+        'mm': 0.000000001,
+        'cm': 0.000001,
         'dm': 0.001,
         'm': 1,
-        'km': 1000
+        'km': 1000000000000000000
     };
     return value * conversions[unit];
 }
 
 function convertFromMeters(meters, unit) {
     const conversions = {
-        'mm': 10000000,
-        'cm': 100000,
+        'mm': 1000000000,
+        'cm': 1000000,
         'dm': 1000,
         'm': 1,
-        'km': 0.001
+        'km': 0.000000000000000001
     };
     return meters * conversions[unit];
 }
