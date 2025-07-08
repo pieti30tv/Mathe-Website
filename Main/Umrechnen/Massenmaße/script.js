@@ -1,23 +1,23 @@
-function convertToMeters(value, unit) {
+function convertToGrams(value, unit) {
     const conversions = {
-        'mm': 0.000000001,
-        'cm': 0.000001,
-        'dm': 0.001,
-        'm': 1,
-        'km': 1000000000000000000
+        'mg': 0.001,
+        'g': 1,
+        'dag': 10,
+        'kg': 1000,
+        't': 1000000
     };
     return value * conversions[unit];
 }
 
-function convertFromMeters(meters, unit) {
+function convertFromGrams(grams, unit) {
     const conversions = {
-        'mm': 1000000000,
-        'cm': 1000000,
-        'dm': 1000,
-        'm': 1,
-        'km': 0.000000000000000001
+        'mg': 1000,
+        'g': 1,
+        'dag': 0.1,
+        'kg': 0.001,
+        't': 0.000001
     };
-    return meters * conversions[unit];
+    return grams * conversions[unit];
 }
 
 document.addEventListener("DOMContentLoaded", function(){
@@ -39,8 +39,8 @@ document.addEventListener("DOMContentLoaded", function(){
             return;
         }
         
-        const meters = convertToMeters(inputValue, sourceUnit);
-        const result = convertFromMeters(meters, targetUnit);
+        const grams = convertToGrams(inputValue, sourceUnit);
+        const result = convertFromGrams(grams, targetUnit);
         
         MeterOutputNUM.value = result;
     }
