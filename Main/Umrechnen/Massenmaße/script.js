@@ -34,8 +34,8 @@ document.addEventListener("DOMContentLoaded", function(){
         const sourceUnit = USPEH.value;
         const targetUnit = ZielEH.value;
         
-        if (isNaN(inputValue)) {
-            MeterOutputNUM.value = "Bitte geben Sie eine gültige Zahl ein";
+        if (isNaN(inputValue) || MeterInputNUM.value === "") {
+            MeterOutputNUM.value = "";
             return;
         }
         
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function(){
         MeterOutputNUM.value = result;
     }
 
-    // document.getElementById("MeterSubmitBTN").addEventListener("click", performConversion);
-    
     MeterInputNUM.addEventListener("input", performConversion);
+    USPEH.addEventListener("change", performConversion);
+    ZielEH.addEventListener("change", performConversion);
 });
