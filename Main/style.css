@@ -4,7 +4,7 @@
 }
 
 /* Und das für konsistente Darstellung */
-button, input, select {
+button, input, select, a {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
