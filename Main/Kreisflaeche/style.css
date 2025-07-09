@@ -10,6 +10,11 @@ button, input, select {
     appearance: none;
 }
 
+a {
+    text-decoration: none;
+    color: green;
+    cursor: pointer;
+}
 
 body{
     margin: 50px;
@@ -113,4 +118,10 @@ button:active {
         border: 1px solid #ccc;
         background-color: #f9f9f9;
     }
+
+    a {
+    text-decoration: none;
+    color: green;
+    cursor: pointer;
+}
 }

@@ -14,6 +14,13 @@ button, input, select {
 body {
     font-family: Arial, Geneva, Tahoma, sans-serif
 }
+
+a {
+    text-decoration: none;
+    color: green;
+    cursor: pointer;
+}
+
 .Buttons_AW {
     display: flex;
     justify-content: center;

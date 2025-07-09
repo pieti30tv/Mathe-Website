@@ -20,6 +20,13 @@ body{
     transform-origin: 0 0;
     width: 83.33%; /* 100/1.2 = 83.33% um Layout-Probleme zu vermeiden */
 }
+
+a {
+    text-decoration: none;
+    color: green;
+    cursor: pointer;
+}
+
 .Input{
     border: solid 1px #000000;
     border-radius: 20px;
@@ -74,5 +81,11 @@ h1 {
         margin: 20px;
         padding: 10px;
         
+    }
+
+    a {
+    text-decoration: none;
+    color: green;
+    cursor: pointer;
     }
 }
