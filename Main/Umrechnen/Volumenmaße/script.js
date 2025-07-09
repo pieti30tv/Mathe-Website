@@ -4,7 +4,7 @@ function convertToMeters(value, unit) {
         'cm': 0.000001,
         'dm': 0.001,
         'm': 1,
-        'km': 1000000000000000000
+        'km': 1000000000
     };
     return value * conversions[unit];
 }
@@ -15,7 +15,7 @@ function convertFromMeters(meters, unit) {
         'cm': 1000000,
         'dm': 1000,
         'm': 1,
-        'km': 0.000000000000000001
+        'km': 0.000000001
     };
     return meters * conversions[unit];
 }
