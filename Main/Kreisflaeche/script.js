@@ -1,20 +1,33 @@
-let Durchmesser;
-let Radius;
-let Fläche;
-const Pi = 3.14159265358979323846;
+
 
 document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("D-Submit").addEventListener("click", function() {
+    document.getElementById("Submit").addEventListener("click", function() {
+
+        // document.getElementById("D-Input").value = document.getElementById("D-Input").value = "";
+        // document.getElementById("D-Input").value = document.getElementById("D-Output").value = "";
+
         try {
-            Durchmesser = parseFloat(document.getElementById("D-Input").value);
-            if (isNaN(Durchmesser) || Durchmesser <= 0) {
-                throw new Error("Bitte geben Sie eine gültige Zahl für den Durchmesser ein.");
-            }
+            let Durchmesser;
+            let Radius;
+            let Flaeche;
+
+            const PI = 3.14159265358979323846;
+
+            Durchmesser = document.getElementById("D-Input").value;
+            console.log(Durchmesser);
+
             Radius = Durchmesser / 2;
-            Fläche = Pi * (Radius * Radius);
-            document.getElementById("D-Output").value = Fläche;
-        } catch (error) {
-            document.getElementById("Error_Output").innerHTML = "Fehler: " + error.message;
+            console.log(Radius);
+
+            Flaeche = Radius * Radius * PI;
+            console.log(Flaeche);
+
+            document.getElementById("D-Output").value = Flaeche;
+
+            console.log("Hello");
+        } 
+        catch (exceptionVar) {
+            console.error("An error occurred: ", exceptionVar);
         }
     });
 });
