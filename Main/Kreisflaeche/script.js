@@ -1,36 +1,45 @@
-
-
 document.addEventListener("DOMContentLoaded", function() {
+
     document.getElementById("Submit").addEventListener("click", function() {
 
-        // document.getElementById("D-Input").value = document.getElementById("D-Input").value = "";
-        // document.getElementById("D-Input").value = document.getElementById("D-Output").value = "";
-
+        let Durchmesser = document.getElementById("D-Input").value;
+        
         try {
-            let Durchmesser;
-            let Radius;
-            let Flaeche;
 
-            const PI = 3.14159265358979323846;
+            if (isNaN(Durchmesser) || Durchmesser <= 0) {
+                document.getElementById("Error-OUT").innerHTML = "Bitte geben Sie eine gültige Zahl über 0 ein!";
+                return;
+            }
 
-            Durchmesser = document.getElementById("D-Input").value;
-            console.log(Durchmesser);
-
-            Radius = Durchmesser / 2;
-            console.log(Radius);
-
-            Flaeche = Radius * Radius * PI;
-            console.log(Flaeche);
-
-            document.getElementById("D-Output").value = Flaeche;
-
-            console.log("Hello");
-        } 
-        catch (exceptionVar) {
-            console.error("An error occurred: ", exceptionVar);
         }
+        catch(e) {
+            console.error("Error: " + e.message);
+            document.getElementById("Error-OUT").innerHTML = "Bitte geben Sie eine gültige Zahl über 0 ein!";
+        }
+
+        console.log(Durchmesser);
+
+        Radius = Durchmesser / 2;
+        console.log(Radius);
+
+        Rad2 = Radius * Radius;
+        console.log(Rad2);
+
+        console.log("Berechnete Fläche: ");
+        let Fläche = Math.PI * Rad2
+        console.log(Fläche);
+
+        document.getElementById("D-Output").value = Fläche;
+
+        document.getElementById("Error-OUT").innerHTML = "";
+
     });
+
 });
 
 
 
+
+
+
+ 
