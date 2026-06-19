@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 */
 
-console.log("Script_load sucess in script.js");
+console.log("Script loaded successfully");
 
 
 
